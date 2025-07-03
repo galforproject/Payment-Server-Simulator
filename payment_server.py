@@ -20,8 +20,8 @@ API_TOKEN_INSTANCE = os.getenv("GREEN_API_TOKEN_INSTANCE")
 API_BASE_URL = os.getenv("BASE44_API_BASE_URL")
 API_KEY = os.getenv("BASE44_API_KEY")
 APP_ID = os.getenv("BASE44_APP_ID")
-SERVER_HOST = os.getenv("PAYMENT_SERVER_HOST")
-SERVER_PORT = int(os.getenv("PAYMENT_SERVER_PORT"))
+SERVER_HOST = os.getenv("HOST", "0.0.0.0")
+SERVER_PORT = int(os.getenv("PORT", os.getenv("PAYMENT_SERVER_PORT", 8000)))
 
 # אחסון תשלומים ממתינים
 pending_payments = {}
